@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 13 2021 г., 21:12
+-- Время создания: Фев 14 2021 г., 22:20
 -- Версия сервера: 8.0.19
 -- Версия PHP: 7.4.5
 
@@ -38,14 +38,9 @@ CREATE TABLE `feedback` (
 --
 
 INSERT INTO `feedback` (`id`, `name`, `feedback`) VALUES
-(9, 'admin', 'test'),
-(10, 'user', 'Привет'),
-(11, '&lt;script&gt;', '123'),
-(12, 'Петя', 'Как дела'),
-(13, 'Петя', 'Как дела2'),
-(14, '11', '111'),
-(15, 'Новое22', 'сообщение22'),
-(16, '333', '444');
+(18, 'Здравствуй', 'Здравствуйте'),
+(19, 'Студент', 'Доброго времени суток!'),
+(20, 'Студент', 'Спасибо за уроки');
 
 -- --------------------------------------------------------
 
@@ -65,18 +60,18 @@ CREATE TABLE `gallery` (
 
 INSERT INTO `gallery` (`id`, `name`, `likes`) VALUES
 (1, '01.jpg', 1),
-(2, '02.jpg', 1),
+(2, '02.jpg', 4),
 (3, '03.jpg', 0),
 (4, '04.jpg', 0),
-(5, '05.jpg', 0),
+(5, '05.jpg', 1),
 (6, '06.jpg', 0),
 (7, '07.jpg', 0),
-(8, '08.jpg', 0),
+(8, '08.jpg', 3),
 (9, '09.jpg', 0),
 (10, '10.jpg', 0),
 (11, '11.jpg', 0),
 (12, '12.jpg', 0),
-(13, '13.jpg', 0),
+(13, '13.jpg', 1),
 (14, '14.jpg', 0),
 (15, '15.jpg', 0);
 
@@ -99,9 +94,9 @@ CREATE TABLE `goods` (
 --
 
 INSERT INTO `goods` (`id`, `name`, `image`, `price`, `description`) VALUES
-(1, 'Виски Dewar\'s 12 years old, 0.5 л', '1.jpg', 2050, 'Фильтрация:\r\nХолодная фильтрация\r\nВыдержка:\r\n12 лет\r\nТип бочки:\r\nДубовые бочки\r\n'),
-(2, 'Виски Dewar\'s Caribbean Smooth 8 years, gift box, 0,7', '2.jpg', 1851, 'Дополнительная информация\r\nФильтрация:\r\nХолодная фильтрация\r\nВыдержка:\r\n8 лет\r\nТип бочки:\r\nДубовые бочки\r\n'),
-(3, 'Виски Dewar\'s White Label, gift box, 1 л', '3.jpg', 2666, 'Страна:\r\nШотландия\r\n \r\nПроизводитель:\r\nJohn Dewar and Sons\r\n \r\nБренд:\r\nDewar\'s\r\n\r\nФильтрация:\r\nХолодная фильтрация\r\nТип бочки:\r\nДубовые бочки\r\n');
+(1, 'Виски Dewar\'s 12 years old, 0.5 л', '1.jpg', 2050, 'Фильтрация:\r\nХолодная фильтрация<br>\r\nВыдержка:\r\n12 лет<br>\r\nТип бочки:\r\nДубовые бочки\r\n'),
+(2, 'Виски Dewar\'s Caribbean Smooth 8 years, gift box, 0,7', '2.jpg', 1851, 'Фильтрация:\r\nХолодная фильтрация<br>\r\nВыдержка:\r\n8 лет<br>\r\nТип бочки:\r\nДубовые бочки\r\n'),
+(3, 'Виски Dewar\'s White Label, gift box, 1 л', '3.jpg', 2666, 'Страна:\r\nШотландия<br>\r\n \r\nПроизводитель:\r\nJohn Dewar and Sons<br>\r\n \r\nБренд:\r\nDewar\'s<br>\r\n\r\nФильтрация:\r\nХолодная фильтрация<br>\r\nТип бочки:\r\nДубовые бочки\r\n');
 
 -- --------------------------------------------------------
 
@@ -198,7 +193,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT для таблицы `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT для таблицы `gallery`
