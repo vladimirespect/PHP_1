@@ -1,0 +1,383 @@
+.heading1 {
+    color: darkblue;
+    background-color: #ccc;
+    border: 4px solid black;
+    text-align: center;
+    /*выравнивание текста по центру*/
+}
+
+
+.link {
+    text-decoration: none;
+    /*убирает нижнее подчеркивание на ссылках с классом link*/
+    /* text-transform: uppercase; делает все буквы заглавными or lowercase прописными */
+    border: 1px solid black;
+    background-color: beige;
+
+}
+
+.menu {
+    color: black;
+    font-size: 18px;
+}
+
+.menu li {
+    width: 200px;
+    height: 30px;
+    list-style-type: none;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.menu li:first-child {
+    /*обращение к первому элементу*/
+    border-top-right-radius: 10px;
+    /*скругление границы рамки*/
+    border-top-left-radius: 10px;
+}
+
+.menu li:last-child {
+    /*обращение к последнему элементу*/
+    border-bottom-right-radius: 10px;
+    /*скругление границы рамки*/
+    border-bottom-left-radius: 10px;
+}
+
+.menu li:nth-child(1n) {
+    /*  в собках может быть просто номер, или формула типа 3n- каждый третий, 2n- каждый второй (чётный) , или 2n-1 нечётный */
+    background-color: palegreen;
+}
+
+.menu li:nth-child(2) a {
+    /* в классе меню найти 2й элемент ли в котором найти а для которого указать цвет, т.к. ссылку красит не атрибут списка ли а атрибут ссылки а */
+    color: darkviolet;
+}
+
+
+
+.menu li a:hover {
+    /*псевдоэлемент подсветка ссылки меню при наведении курсором*/
+    color: orangered;
+}
+
+.menu li a:active {
+    /*псевдоэлемент подсветка ссылки меню при нажатии курсором*/
+    color: aquamarine;
+}
+
+
+h3 {
+    color: red;
+}
+
+/*h1,
+h3,
+p {
+    text-align: center;
+}
+такая запись применяется для одинаковых параметров стиля ко всм заголовкам. Нижняя запись стиля всегда имеет приоритет над верхней. МОжно дописать к последнему атрибуту CSS !important; - ТОГДА ДАННЫЙ СТИЛЬ БУДЕТ ИМЕТЬ ПРИОРИТЕТ ДАЖЕ ЕСЛИ ЕСТЬ УСТАНОВКИ ДЛЯ СТИЛЯ КОТОРЫЕ НАХ-СЯ НИЖЕ В СSS 
+
+Инлайн стиль (стиль прописанный прямо в теге в html имеет приоритет над стилем в CSS)
+
+если сверху прописан стиль типа .menu li {}
+а ниже просто li то приоритет будет у .menu li {} так как прописано более точно. li вне класса menu будет по стилю для li
+
+*/
+
+
+
+
+p {
+    font-size: 20px;
+}
+
+
+
+img[alt="мост виадук"] {
+    border: 4px solid darkblue;
+}
+
+/*.list {
+    list-style-type: none; /* убирает точки из списка (ёпта!)*/
+/*}
+
+.list li {
+    width: 70px; /* ширина высота рамка*/
+/*  height: 25px;
+    border: 1px solid #000;
+}*/
+
+
+.list li:nth-child(2)::after {
+    /* псевдоэлемент афтер сложно отличить от псевдокласса, поэтому чисто для себя можем ставить два двоеточия , а не одно. Но в интернет эксплорер 8 не будет поддерживаться такой код  */
+
+    content: " new!";
+    /*вместо new может быть любой нужный нам текст*/
+    color: blueviolet;
+    text-transform: uppercase;
+}
+
+.menu li:hover::after {
+    /*если хочу стрелки при наведении на меню, вообще hover это что то при наведении а after это что то после чего то. Можем использовать там же before и будет ДО чего-то*/
+    content: " >>";
+    color: red;
+}
+
+
+/* .list > li { такая запись обращается только к дочерним элементам списка , пунктам- и игнорирует подпункты или внучек) 
+smth
+} 
+
+.list + p { 
+/Так можно обратиться к соседу снизу у класса list в данном случае это параграф и именно тот один параграф который идёт после list/
+color: aqua;
+}
+
+*/
+
+
+.li1 {
+    color: aqua;
+    background: url(Catalog/catalog_img/fon.jpg) no-repeat 400px 250px;
+}
+
+
+.whisky {
+    color: aqua;
+    background: url(Catalog/catalog_img/fon.jpg) 0px -90px;
+    font-size: 21px;
+}
+
+
+
+
+
+
+.pa {
+    color: darkorange;
+    background: url(Catalog/catalog_img/fon.jpg);
+    /* коротко background: url(Catalog/catalog_img/fon.jpg) no-repeat 30 px 40 px; 
+        
+        background-image: url(Catalog/catalog_img/fon.jpg);
+    background-repeat: no-repeat; если не надо замостить всю территорию
+    background-position: center or отдельные значения по иксу и по игреку f.e. right 50px or 30px 40px 
+    Можно все значения написать в одну строку чтобы не плодить код, как и сделано в оригинале */
+}
+
+/*
+Каждому тегу можно присвоить имя стиля, каждому имени стиля повторив его с точки можно присвоить стиль. Через CTRL+E можно прямо с имени стиля в HTML редактировать стиль CSS
+*/
+
+.text:first-letter {
+    /* Красивая первая заглавная буква в тексте параграфа  */
+    font-size: 30px;
+    color: brown;
+}
+
+/* Урок 4 видео 3 ТАБЛИЦЫ страница прайс лист ...<table>...<tr> <td> </td> </tr> </table> атрибут <td colspan="2"> объединит 2 ячейки вправо, соответственно ячейка 3 сместится и её нужно будет удалить ...атрибут <td rowspan="3"> объединит 3 ячейки вниз, соответственно ячейки 4 и 7 сместятся и их нужно будет удалить */
+
+/*table {
+    border: 1px solid #000;
+    width: 400px;
+    height: 200px;
+}
+
+td {
+    border: 1px solid #000;
+}*/
+
+
+/*Урок 4 видео 4*/
+
+.table1 {
+    border: 1px solid #000;
+    /* сделать эту запись быстро= bd+ TAB */
+    width: 400px;
+    height: 300px;
+    /* border-spacing: 10px; /* пространство между ячейками */
+    border-collapse: collapse;
+    /* ячейки сливаются чтобы выглядела как таблица без задвоенных рамок */
+}
+
+.table1 td {
+    border: 1px solid black;
+    padding-left: 10px;
+    /* отступ слева внутри ячеек, центровка содержимого */
+    /* padding-top: 40px;/* отступ сверху внутри ячеек */
+    /* vertical-align: top; /*va tab   Элементы прижмутся к верхней границе ячейки*/
+    vertical-align: middle;
+    text-align: center;
+    /* эта пара отцентрует всё строго по центру*/
+
+}
+
+.five {
+    background-color: green;
+    /* bgc tab*/
+}
+
+/* урок 4 видео 5 */
+
+div {
+    height: 200px;
+    border: 1px solid #000;
+}
+
+span {
+    color: dodgerblue;
+}
+
+/*Урок 5 видео 1*/
+.priceMenu > li {
+    width: 150px;
+    height: 50px;
+    border: 1px solid #000;
+    list-style-type: none; /*убирает точки из списка*/
+}
+
+
+
+/*.priceMenu a {  /* значение высоты взяли как у элемента li выше, дисплей блок позволяет растянуть ссылку а на всё необходимое нам поле. Куда бы ни ткнул пользователь- это будет работать как ссылка   */
+/*   display: block;
+    width: 100%;
+    height: 50px;
+}  */
+
+
+/* .priceMenu  li {   /*  блочный li передалали в строчный */
+/*   display: inline;
+} 
+
+.priceMenu  li {   /*  блочный li передалали в строчно-блочный */
+/*  display: inline-block;
+} */
+
+.priceMenu li ul {
+    /*не отображать на дисплее эти элементы: подсказка, выпадающая менюшка */
+    display: none;
+}
+
+.priceMenu li:hover ul {
+    /*при наведении на li которая содержит ul отобразить его*/
+    display: block;
+}
+
+/*Lesson 5.2*/
+.header2 {
+    border: none;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: none;
+    margin-top: 50px; /*внешний отступ сверху*/
+    margin-left: 100px;
+    /*border: 4px solid #000; увеличивает ширину логотипа, при играх со скрытием-раскрытием будут пляски у сайта по отступам */
+    outline: 4px solid aqua;/*не граница а просто окрас внешний линии, не увеличивает размер лого, нет плясок при скрытии раскрытии так как ширина не меняется*/
+}
+
+.logo:hover {
+    outline: none;
+}
+
+.menu5 li {
+    padding-top: 20px; /* внутренний отступ сверху*/
+    padding-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*Lesson 5.3 Обтекаемость product.html */
+
+
+.product {
+    width: 200px; /*очень важно не должно быть пробела в значении 200px */
+    height: 150px;
+    outline: 1px solid black;
+    float:left; /* прижаться к левому краю, обтекание */
+    /* блочные элементы ведут себя так, как будто блоков со свойством float нет (чтобы исправить нужно такому слепому блоку дать свойство clear: both;). Строчные элементы (текст, ли и пр. ОБТЕКАЮТ блоки со свойством float) display: block автоматически применяется вместе со свойством float, т.е. все строчные элементы становятся блочными  */
+}
+
+.footer {
+    height: 100px;
+    clear: both; /*cb tab - заставляет блок футер ЗАМЕТИТЬ блок продакт со свойством float */
+    /* ВМЕСТО clear: both; можно применить overflow: hidden; Тогда все наползающие элементы будут скрыты, например фон наползающий на другой блок. При этом текст внутри данного блока по-прежнему будет обтекать блок со свойством float  */
+}
+
+/*Lesson 5.4 Обтекаемость product.html */
+
+.productt {
+    width: 200px;
+    height: 150px;
+    border: 1px solid black;
+    float:left;
+}
+
+
+.product_1 {
+    background-color: #ccc;
+  /*  margin-left: 150px;
+    margin-left: 50px; данный код сделает отступ, но подвинет второй блок вниз   */
+    position: relative;
+    top: 50px;
+    left: 150px;
+    z-index: 1; /* стать верхним слоем. ближе к пользователю. работает только со свойством   position: relative;  */
+    text-align: center;
+}
+
+.product_2 {
+    position: relative;
+    top: 20px;
+    left: 50px; 
+    background-color: aqua;
+    
+}
+
+.product_2:hover {
+  z-index: 2;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
